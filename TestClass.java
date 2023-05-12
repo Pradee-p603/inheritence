@@ -1,39 +1,32 @@
-package in.co.rays.inheritence;
+package in.co.rays.practiceinheritence;
 
-public class TestClass {
-	public static void main(String[] args) {
-		
-		Rectangle r = new Rectangle();
-		
-		r.setlength(10);
-		r.setbreadth(10);
-		r.raera();
-		
-		Triangle t = new Triangle();
-		t.setbase(10);
-		t.setheight(10);
-		t.tarea();
-		circle c = new circle();
-		c.setradius(10);
-		c.Carea();
+public class testclass {
+public static void main(String[] args) {
+	 Shape s[]  = new Shape[3];
+	 s[0] = new Rectangle();
+	 s[1] = new Circle();
+	 s[2] = new Triangle();
+	 
+	 Rectangle r = (Rectangle)s[0];
+	 r.setbreadth(10);
+	 r.setlength(15);
+	// r.area();
 	
-		Shape s = new Triangle();
-		Triangle t1 = (Triangle)s; //typecasting
-		t1.setbase(5);
-		t1.setheight(5);
-		t1.tarea();
-		
-		Shape s1 = new circle();
-		circle c1 = (circle)s1;
-		c1.setradius(10);
-		c1.Carea();
-		
-		
-		Shape s2 =new Rectangle();
-		Rectangle r1 = (Rectangle)s2;
-		r1.setbreadth(12);
-		r1.setlength(10);
-		r1.raera();
-	}
-
+	 
+	 Circle c = (Circle)s[1];
+	 c.setradius(15);
+	 //c.area();
+	 
+	 Triangle t = (Triangle)s[2];
+	 t.setbase(10);
+	 t.setheight(15);
+	 //t.area();
+	 
+	 double totalarea = 0;
+	 for(int i = 0; i < s.length; i++) {
+		 totalarea = totalarea + s[i].area();
+	 }
+	 System.out.println("totalarea = " + totalarea);
+	 }
 }
+

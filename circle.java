@@ -1,19 +1,20 @@
-package in.co.rays.inheritence;
+package in.co.rays.practiceinheritence;
 
-public class circle extends Shape{
-	private int radius;
+public class Circle extends Shape {
+	private int radius = 0;
 	public static final double PI = 3.14;
-	
-	
+
 	public void setradius(int radius) {
 		this.radius = radius;
 	}
+
 	public int getradius() {
 		return radius;
 	}
-	public void Carea() {
-		  double Carea =  PI * radius * radius;
-		  System.out.println("radius of circle  = " + Carea);
-	}
 
+	public double area() {
+		double Carea = PI * radius * radius;
+		System.out.println("Area of circle = " + Carea);
+		return Carea;
+	}
 }

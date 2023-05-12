@@ -1,4 +1,4 @@
-package in.co.rays.inheritence;
+package in.co.rays.practiceinheritence;
 
 public class Rectangle extends Shape {
 	private int length;
@@ -16,9 +16,9 @@ public void setbreadth(int breadth) {
 public int getbreadth() {
 	return breadth;
 }
-public void raera() {
-	int rarea = length *breadth;
+public double area() {
+	double rarea = length *breadth;
 	System.out.println("area of rectangle = " + rarea);
+	return rarea;
 }
-
 }
